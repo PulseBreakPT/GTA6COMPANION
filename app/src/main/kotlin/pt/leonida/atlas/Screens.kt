@@ -2,7 +2,8 @@
 package pt.leonida.atlas
 
 import android.content.Intent
-import android.net.Uri
+import androidx.core.net.toUri
+import androidx.activity.compose.LocalActivity
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -55,7 +56,7 @@ val LocalLanguage=staticCompositionLocalOf { "en" }
  val dark=when(prefs.theme) { "dark"->true; "light"->false; else->isSystemInDarkTheme() }
  AtlasTheme(dark) {
   CompositionLocalProvider(LocalLanguage provides prefs.language) {
-   val activity=LocalContext.current as? android.app.Activity
+   val activity=LocalActivity.current
    SideEffect { activity?.window?.let { window ->
     androidx.core.view.WindowCompat.getInsetsController(window,window.decorView).apply {
      isAppearanceLightStatusBars=!dark;isAppearanceLightNavigationBars=!dark
@@ -320,8 +321,7 @@ private val destinations=listOf(
  var collectionDialog by remember {mutableStateOf(false)}
  val haptic=LocalHapticFeedback.current;val context=LocalContext.current;val hidden=entry.spoiler in state.hidden && !revealed
  val lang=state.prefs.language
- val invalidLink=t("Cannot open the official source on this device.","Não é possível abrir a fonte oficial neste dispositivo.")
- fun source() { try { require(Rules.safeSource(entry.source));context.startActivity(Intent(Intent.ACTION_VIEW,Uri.parse(entry.source))) } catch(_: Exception){vm.notify("error")} }
+ fun source() { try { require(Rules.safeSource(entry.source));context.startActivity(Intent(Intent.ACTION_VIEW,entry.source.toUri())) } catch(_: Exception){vm.notify("error")} }
  Page {
   item {PageTitle(category(entry.category),entry.title.inLanguage(lang))}
   item {Row(horizontalArrangement=Arrangement.spacedBy(10.dp)) {
