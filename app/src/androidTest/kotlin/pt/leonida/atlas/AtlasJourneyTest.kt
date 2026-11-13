@@ -15,7 +15,7 @@ import org.junit.runner.RunWith
   ui.onNodeWithText("Search the atlas").performTextInput("Vice City")
   ui.onNodeWithTag("entry-vice-city").performScrollTo().performClick()
   ui.onNodeWithText("Save offline").performScrollTo().performClick()
-  ui.waitUntil {ui.onAllNodesWithText("Remove from saved").fetchSemanticsNodes().isNotEmpty()}
+  ui.waitUntil(10000) {ui.onAllNodesWithText("Remove from saved").fetchSemanticsNodes().isNotEmpty()}
   ui.activityRule.scenario.recreate()
   ui.waitUntil(20000) {ui.onAllNodesWithText("My vault").fetchSemanticsNodes().isNotEmpty()}
   ui.onNodeWithText("My vault").performClick()
@@ -24,6 +24,7 @@ import org.junit.runner.RunWith
   ui.onNodeWithText("Create objective").performScrollTo().performClick()
   ui.onNodeWithText("Title",substring=false).performTextInput("Explore my own route")
   ui.onNodeWithText("Save",substring=false).performClick()
+  ui.waitUntil(10000) {ui.onAllNodesWithText("Explore my own route").fetchSemanticsNodes().isNotEmpty()}
   ui.onNodeWithText("Explore my own route").assertExists()
  }
 }

@@ -19,7 +19,7 @@ Enable Play App Signing while creating the app in Play Console; have Google gene
 - Review English/Portuguese listing copy, adaptive icon, 512×512 store icon, 1024×500 feature graphic and actual device screenshots in `store/`.
 - Complete Data Safety using `store/data-safety.md`, reflecting any configured feed host or added SDKs. Check the final merged manifest.
 - Answer IARC’s questionnaire truthfully based on the app’s actual content and external links; the game’s rating is not automatically this app’s rating. This companion links to mature game material and is not designed for children. Do not predeclare a rating before IARC assigns it.
-- Complete app-access declarations (all functions available without login), ads (none), target audience, content rights/impersonation review and permission declarations. No notification, location or broad storage permission is requested.
+- Complete app-access declarations (all functions available without login), ads (none), target audience, content rights/impersonation review and permission declarations. No notification, location or broad storage permission is requested. WorkManager requires WAKE_LOCK and RECEIVE_BOOT_COMPLETED for periodic background sync; the manifest removes its unused foreground service.
 - Test signed release on physical devices, accessibility tools, API 26 and 36+, tablet/large fonts, offline mode, SAF denial/cancellation and upgrade persistence. See QA matrix.
 - Upload a signed AAB to internal testing, resolve Play’s pre-launch report and any policy issues, then run applicable closed testing and apply for production access.
 
