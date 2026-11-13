@@ -27,6 +27,8 @@ Enable Play App Signing while creating the app in Play Console; have Google gene
 
 Google’s documentation consulted on 2026-11-13 says new personal developer accounts created after 2023-11-13 require at least 12 opted-in testers continuously for 14 days before applying for production access. Applicability depends on the account and the current console requirements. Recruit real testers, share the opt-in URL, collect feedback and document actual test usage. An automated workflow does not complete this requirement.
 
+The screenshot workflow renders the actual app at 1080×1920 and exports lossless RGB PNGs without alpha. It validates the 320–3840 dimension bounds and maximum 2:1 aspect ratio. It changes emulator display resolution before capture, rather than cropping or inventing UI. Pillow is used only to remove the opaque alpha channel without changing RGB pixels. The original icon is 512×512; the feature graphic is 1024×500 RGB.
+
 ## Verified policy references
 
 https://support.google.com/googleplay/android-developer/answer/11926878 (target API; checked 2026-11-13: API 36 for new phone app submissions)
@@ -36,6 +38,8 @@ https://support.google.com/googleplay/android-developer/answer/14151465 (new per
 https://developer.android.com/studio/publish/app-signing (Play App Signing and upload keys)
 
 https://support.google.com/googleplay/android-developer/answer/10787469 (Data Safety)
+
+https://support.google.com/googleplay/android-developer/answer/9866151 (preview assets, dimensions and formats)
 
 ## Maintenance
 
