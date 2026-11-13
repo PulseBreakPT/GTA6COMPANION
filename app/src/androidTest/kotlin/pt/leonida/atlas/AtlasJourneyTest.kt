@@ -11,14 +11,15 @@ import org.junit.runner.RunWith
  @Test fun searchFavoriteSurvivesRecreationAndManualObjectiveWorks() {
   ui.waitUntil(20000) {ui.onAllNodesWithText("Skip").fetchSemanticsNodes().isNotEmpty() || ui.onAllNodesWithText("Discover").fetchSemanticsNodes().isNotEmpty()}
   if(ui.onAllNodesWithText("Skip").fetchSemanticsNodes().isNotEmpty()) ui.onNodeWithText("Skip").performClick()
-  ui.onNodeWithText("Discover",useUnmergedTree=true).performClick()
+  ui.waitUntil(20000) {ui.onAllNodesWithTag("nav-discover").fetchSemanticsNodes().isNotEmpty()}
+  ui.onNodeWithTag("nav-discover").performClick()
   ui.onNodeWithText("Search the atlas").performTextInput("Vice City")
   ui.onNodeWithTag("entry-vice-city").performScrollTo().performClick()
   ui.onNodeWithText("Save offline").performScrollTo().performClick()
   ui.waitUntil(10000) {ui.onAllNodesWithText("Remove from saved").fetchSemanticsNodes().isNotEmpty()}
   ui.activityRule.scenario.recreate()
-  ui.waitUntil(20000) {ui.onAllNodesWithText("My vault").fetchSemanticsNodes().isNotEmpty()}
-  ui.onNodeWithText("My vault").performClick()
+  ui.waitUntil(20000) {ui.onAllNodesWithTag("nav-vault").fetchSemanticsNodes().isNotEmpty()}
+  ui.onNodeWithTag("nav-vault").performClick()
   ui.onNodeWithText("Vice City").assertExists()
   ui.onNodeWithText("Objectives").performClick()
   ui.onNodeWithText("Create objective").performScrollTo().performClick()

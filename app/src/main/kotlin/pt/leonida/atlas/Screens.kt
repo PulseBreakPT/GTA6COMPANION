@@ -131,7 +131,7 @@ private val destinations=listOf(
   Row(Modifier.fillMaxSize()) {
    if(wide) NavigationRail(Modifier.fillMaxHeight().safeDrawingPadding(),containerColor=MaterialTheme.colorScheme.surface) {
     Spacer(Modifier.height(24.dp));AtlasLogo();Spacer(Modifier.height(40.dp))
-    destinations.forEach { d -> NavigationRailItem(selected=route==d.route,onClick={go(d.route)},icon={Icon(d.icon,null)},label={Text(t(d.en,d.pt))}) }
+    destinations.forEach { d -> NavigationRailItem(modifier=Modifier.testTag("nav-${d.route}"),selected=route==d.route,onClick={go(d.route)},icon={Icon(d.icon,null)},label={Text(t(d.en,d.pt))}) }
    }
    Scaffold(Modifier.weight(1f),containerColor=MaterialTheme.colorScheme.background,snackbarHost={SnackbarHost(snackbar)},
     topBar={
@@ -145,7 +145,7 @@ private val destinations=listOf(
       IconButton(onClick={go("settings")}) { Icon(Icons.Outlined.Tune,t("Settings","Definições")) }
      }
     },bottomBar={ if(!wide) NavigationBar(containerColor=MaterialTheme.colorScheme.surface,tonalElevation=0.dp) {
-     destinations.forEach { d -> NavigationBarItem(selected=route==d.route,onClick={go(d.route)},icon={Icon(d.icon,null)},label={Text(t(d.en,d.pt),maxLines=1,fontSize=11.sp)}) }
+     destinations.forEach { d -> NavigationBarItem(modifier=Modifier.testTag("nav-${d.route}"),selected=route==d.route,onClick={go(d.route)},icon={Icon(d.icon,null)},label={Text(t(d.en,d.pt),maxLines=1,fontSize=11.sp)}) }
     } }
    ) { padding ->
     Box(Modifier.padding(padding).fillMaxSize(),contentAlignment=Alignment.TopCenter) {
@@ -209,10 +209,10 @@ private val destinations=listOf(
   item {
    Box(Modifier.fillMaxWidth().clip(RoundedCornerShape(28.dp))) {
     HorizonArt(Modifier.matchParentSize())
-    Column(Modifier.padding(24.dp).padding(top=100.dp)) {
+    Column(Modifier.padding(24.dp).padding(top=56.dp)) {
      Surface(color=Night.copy(alpha=.65f),shape=RoundedCornerShape(50)) { Text(t("YOUR INDEPENDENT ATLAS","O TEU ATLAS INDEPENDENTE"),Modifier.padding(horizontal=12.dp,vertical=8.dp),color=Aqua,style=MaterialTheme.typography.labelSmall) }
      Spacer(Modifier.height(20.dp))
-     Text(t("Every corner.\nYour story.","Um mundo.\nO teu caminho."),style=MaterialTheme.typography.displayLarge,color=Color.White)
+     Text(t("Leonida.\nYour way.","Leonida.\nExplora."),style=MaterialTheme.typography.displayLarge,color=Color.White)
      Spacer(Modifier.height(16.dp))
      Text(t("Explore what is known. Plan what comes next.","Explora o que já se sabe. Planeia o que vem a seguir."),color=Color(0xFFE2E4EE),style=MaterialTheme.typography.bodyLarge)
      Spacer(Modifier.height(22.dp))

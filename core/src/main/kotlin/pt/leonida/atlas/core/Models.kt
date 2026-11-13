@@ -98,15 +98,32 @@ object Rules {
   return validate(AtlasJson.decodeFromString<ContentPack>(bytes.decodeToString()), previous)
  }
 }
-fun String.folded() = Normalizer.normalize(lowercase(), Normalizer.Form.NFD).replace(Regex("\\p{M}+"), "")
-object Discovery {
- fun search(entries: List<Entry>, query: String, category: String = "all", hidden: Set<String> = emptySet()): List<Entry> {
-  val terms=query.folded().trim().split(Regex("\\s+")).filter { it.isNotBlank() }.take(12)
-  return entries.filter { e ->
-   (category == "all" || e.category == category) && e.spoiler !in hidden &&
-   terms.all { t -> (e.title.en+" "+e.title.pt+" "+e.summary.en+" "+e.summary.pt+" "+e.tags.joinToString(" ")).folded().contains(t) }
-  }.sortedByDescending { e -> terms.count { e.title.en.folded().startsWith(it) || e.title.pt.folded().startsWith(it) } }
+private val accentMarks = Regex("\\p{M}+")
+private val wordBreaks = Regex("\\s+")
+fun String.folded() = Normalizer.normalize(lowercase(java.util.Locale.ROOT), Normalizer.Form.NFD).replace(accentMarks, "")
+
+/** Local immutable index; normalized documents are built once per content edition. */
+private class LocalSearchIndex(entries: List<Entry>) {
+ private data class Document(val entry: Entry, val text: String, val englishTitle: String, val portugueseTitle: String)
+ private val documents=entries.map { entry -> Document(entry,
+  (entry.title.en+" "+entry.title.pt+" "+entry.summary.en+" "+entry.summary.pt+" "+entry.tags.joinToString(" ")).folded(),
+  entry.title.en.folded(),entry.title.pt.folded()) }
+ fun search(query: String,category: String,hidden: Set<String>): List<Entry> {
+  val terms=query.folded().trim().split(wordBreaks).filter { it.isNotBlank() }.take(12)
+  return documents.asSequence().filter { d ->
+   (category=="all" || d.entry.category==category) && d.entry.spoiler !in hidden && terms.all { d.text.contains(it) }
+  }.sortedByDescending { d -> terms.count { d.englishTitle.startsWith(it) || d.portugueseTitle.startsWith(it) } }.map { it.entry }.toList()
  }
+}
+object Discovery {
+ private var source: List<Entry>?=null
+ private var index: LocalSearchIndex?=null
+ @Synchronized private fun indexFor(entries: List<Entry>): LocalSearchIndex {
+  if(source !== entries) { index=LocalSearchIndex(entries);source=entries }
+  return checkNotNull(index)
+ }
+ fun search(entries: List<Entry>,query: String,category: String="all",hidden: Set<String> = emptySet()): List<Entry> =
+  indexFor(entries).search(query,category,hidden)
  fun recommended(entries: List<Entry>, items: List<PersonalItem>, hidden: Set<String>): List<Entry> {
   val known=items.filter { it.kind in setOf("favorite", "history") }.map { it.target }.toSet()
   val weights=entries.filter { it.id in known }.groupingBy { it.category }.eachCount()
