@@ -1,0 +1,382 @@
+{
+  "schema": 1,
+  "version": 1,
+  "verified": "2026-11-13",
+  "launchDate": "2026-11-19",
+  "launchSource": "https://www.rockstargames.com/newswire/article/ak3ak31a49a221/grand-theft-auto-vi-is-now-set-to-launch-november-19-2026",
+  "entries": [
+    {
+      "id": "jason",
+      "category": "people",
+      "title": {
+        "en": "Jason Duval",
+        "pt": "Jason Duval"
+      },
+      "summary": {
+        "en": "An ex-soldier working in the Keys.",
+        "pt": "Ex-militar a trabalhar nas Keys."
+      },
+      "source": "https://www.rockstargames.com/VI/only-in-leonida",
+      "verified": "2026-11-13",
+      "published": "",
+      "evidence": "official",
+      "spoiler": "story",
+      "related": [
+        "lucia",
+        "keys"
+      ],
+      "tags": []
+    },
+    {
+      "id": "lucia",
+      "category": "people",
+      "title": {
+        "en": "Lucia Caminos",
+        "pt": "Lucia Caminos"
+      },
+      "summary": {
+        "en": "Recently released from Leonida Penitentiary.",
+        "pt": "Recentemente libertada da penitenciária de Leonida."
+      },
+      "source": "https://www.rockstargames.com/VI/only-in-leonida",
+      "verified": "2026-11-13",
+      "published": "",
+      "evidence": "official",
+      "spoiler": "story",
+      "related": [
+        "jason"
+      ],
+      "tags": []
+    },
+    {
+      "id": "cal",
+      "category": "people",
+      "title": {
+        "en": "Cal Hampton",
+        "pt": "Cal Hampton"
+      },
+      "summary": {
+        "en": "Jason’s friend and Brian’s associate.",
+        "pt": "Amigo de Jason e associado de Brian."
+      },
+      "source": "https://www.rockstargames.com/VI/only-in-leonida",
+      "verified": "2026-11-13",
+      "published": "",
+      "evidence": "official",
+      "spoiler": "story",
+      "related": [
+        "jason",
+        "brian"
+      ],
+      "tags": []
+    },
+    {
+      "id": "boobie",
+      "category": "people",
+      "title": {
+        "en": "Boobie Ike",
+        "pt": "Boobie Ike"
+      },
+      "summary": {
+        "en": "Vice City businessman and studio owner.",
+        "pt": "Empresário de Vice City, com um estúdio."
+      },
+      "source": "https://www.rockstargames.com/VI/only-in-leonida",
+      "verified": "2026-11-13",
+      "published": "",
+      "evidence": "official",
+      "spoiler": "story",
+      "related": [
+        "vice-city",
+        "dre-quan"
+      ],
+      "tags": []
+    },
+    {
+      "id": "dre-quan",
+      "category": "people",
+      "title": {
+        "en": "Dre’Quan Priest",
+        "pt": "Dre’Quan Priest"
+      },
+      "summary": {
+        "en": "An aspiring music entrepreneur.",
+        "pt": "Empreendedor na indústria musical."
+      },
+      "source": "https://www.rockstargames.com/VI/only-in-leonida",
+      "verified": "2026-11-13",
+      "published": "",
+      "evidence": "official",
+      "spoiler": "story",
+      "related": [
+        "boobie",
+        "real-dimez"
+      ],
+      "tags": []
+    },
+    {
+      "id": "real-dimez",
+      "category": "people",
+      "title": {
+        "en": "Real Dimez",
+        "pt": "Real Dimez"
+      },
+      "summary": {
+        "en": "The duo Bae-Luxe and Roxy.",
+        "pt": "A dupla Bae-Luxe e Roxy."
+      },
+      "source": "https://www.rockstargames.com/VI/only-in-leonida",
+      "verified": "2026-11-13",
+      "published": "",
+      "evidence": "official",
+      "spoiler": "story",
+      "related": [
+        "dre-quan"
+      ],
+      "tags": []
+    },
+    {
+      "id": "raul",
+      "category": "people",
+      "title": {
+        "en": "Raul Bautista",
+        "pt": "Raul Bautista"
+      },
+      "summary": {
+        "en": "An experienced bank robber.",
+        "pt": "Assaltante de bancos experiente."
+      },
+      "source": "https://www.rockstargames.com/VI/only-in-leonida",
+      "verified": "2026-11-13",
+      "published": "",
+      "evidence": "official",
+      "spoiler": "story",
+      "related": [],
+      "tags": []
+    },
+    {
+      "id": "brian",
+      "category": "people",
+      "title": {
+        "en": "Brian Heder",
+        "pt": "Brian Heder"
+      },
+      "summary": {
+        "en": "A smuggler based in the Keys.",
+        "pt": "Contrabandista estabelecido nas Keys."
+      },
+      "source": "https://www.rockstargames.com/VI/only-in-leonida",
+      "verified": "2026-11-13",
+      "published": "",
+      "evidence": "official",
+      "spoiler": "story",
+      "related": [
+        "keys",
+        "jason"
+      ],
+      "tags": []
+    },
+    {
+      "id": "vice-city",
+      "category": "regions",
+      "title": {
+        "en": "Vice City",
+        "pt": "Vice City"
+      },
+      "summary": {
+        "en": "Officially presented region.",
+        "pt": "Região apresentada oficialmente."
+      },
+      "source": "https://www.rockstargames.com/VI/only-in-leonida",
+      "verified": "2026-11-13",
+      "published": "",
+      "evidence": "official",
+      "spoiler": "none",
+      "related": [],
+      "tags": [
+        "Leonida"
+      ]
+    },
+    {
+      "id": "keys",
+      "category": "regions",
+      "title": {
+        "en": "Leonida Keys",
+        "pt": "Leonida Keys"
+      },
+      "summary": {
+        "en": "Officially presented region.",
+        "pt": "Região apresentada oficialmente."
+      },
+      "source": "https://www.rockstargames.com/VI/only-in-leonida",
+      "verified": "2026-11-13",
+      "published": "",
+      "evidence": "official",
+      "spoiler": "none",
+      "related": [],
+      "tags": [
+        "Leonida"
+      ]
+    },
+    {
+      "id": "grassrivers",
+      "category": "regions",
+      "title": {
+        "en": "Grassrivers",
+        "pt": "Grassrivers"
+      },
+      "summary": {
+        "en": "Officially presented region.",
+        "pt": "Região apresentada oficialmente."
+      },
+      "source": "https://www.rockstargames.com/VI/only-in-leonida",
+      "verified": "2026-11-13",
+      "published": "",
+      "evidence": "official",
+      "spoiler": "none",
+      "related": [],
+      "tags": [
+        "Leonida"
+      ]
+    },
+    {
+      "id": "port-gellhorn",
+      "category": "regions",
+      "title": {
+        "en": "Port Gellhorn",
+        "pt": "Port Gellhorn"
+      },
+      "summary": {
+        "en": "Officially presented region.",
+        "pt": "Região apresentada oficialmente."
+      },
+      "source": "https://www.rockstargames.com/VI/only-in-leonida",
+      "verified": "2026-11-13",
+      "published": "",
+      "evidence": "official",
+      "spoiler": "none",
+      "related": [],
+      "tags": [
+        "Leonida"
+      ]
+    },
+    {
+      "id": "ambrosia",
+      "category": "regions",
+      "title": {
+        "en": "Ambrosia",
+        "pt": "Ambrosia"
+      },
+      "summary": {
+        "en": "Officially presented region.",
+        "pt": "Região apresentada oficialmente."
+      },
+      "source": "https://www.rockstargames.com/VI/only-in-leonida",
+      "verified": "2026-11-13",
+      "published": "",
+      "evidence": "official",
+      "spoiler": "none",
+      "related": [],
+      "tags": [
+        "Leonida"
+      ]
+    },
+    {
+      "id": "mount-kalaga",
+      "category": "regions",
+      "title": {
+        "en": "Mount Kalaga",
+        "pt": "Mount Kalaga"
+      },
+      "summary": {
+        "en": "Officially presented region.",
+        "pt": "Região apresentada oficialmente."
+      },
+      "source": "https://www.rockstargames.com/VI/only-in-leonida",
+      "verified": "2026-11-13",
+      "published": "",
+      "evidence": "official",
+      "spoiler": "none",
+      "related": [],
+      "tags": [
+        "Leonida"
+      ]
+    },
+    {
+      "id": "preload",
+      "category": "news",
+      "title": {
+        "en": "Pre-loading is available",
+        "pt": "Pré-carregamento disponível"
+      },
+      "summary": {
+        "en": "Pre-loading is available. Check the official announcement for platform details.",
+        "pt": "O pré-carregamento está disponível. Consulta o anúncio oficial para os detalhes por plataforma."
+      },
+      "source": "https://www.rockstargames.com/newswire/article/89834o94713o21",
+      "verified": "2026-11-13",
+      "published": "2026-11-10",
+      "evidence": "official",
+      "spoiler": "none",
+      "related": [],
+      "tags": []
+    },
+    {
+      "id": "gallery",
+      "category": "news",
+      "title": {
+        "en": "The launch gallery",
+        "pt": "A galeria de lançamento"
+      },
+      "summary": {
+        "en": "Rockstar published a new official screenshot gallery. Open the source to view it.",
+        "pt": "A Rockstar publicou uma nova galeria oficial de imagens. Abre a fonte para a consultar."
+      },
+      "source": "https://www.rockstargames.com/newswire/article/39ak81277255o9",
+      "verified": "2026-11-13",
+      "published": "2026-11-05",
+      "evidence": "official",
+      "spoiler": "none",
+      "related": [],
+      "tags": []
+    },
+    {
+      "id": "release",
+      "category": "news",
+      "title": {
+        "en": "19.11.2026",
+        "pt": "19.11.2026"
+      },
+      "summary": {
+        "en": "The announced release date is November 19, 2026. This is a date, not a promised global unlock time.",
+        "pt": "O lançamento anunciado é a 19 de novembro de 2026. Esta data não define uma hora global de desbloqueio."
+      },
+      "source": "https://www.rockstargames.com/newswire/article/ak3ak31a49a221/grand-theft-auto-vi-is-now-set-to-launch-november-19-2026",
+      "verified": "2026-11-13",
+      "published": "2025-11-06",
+      "evidence": "official",
+      "spoiler": "none",
+      "related": [],
+      "tags": []
+    },
+    {
+      "id": "official-videos",
+      "category": "trailers",
+      "title": {
+        "en": "Official trailers",
+        "pt": "Trailers oficiais"
+      },
+      "summary": {
+        "en": "Watch the trailers and other official videos on Rockstar’s GTA VI site.",
+        "pt": "Vê os trailers e outros vídeos oficiais no site de GTA VI da Rockstar."
+      },
+      "source": "https://www.rockstargames.com/VI",
+      "verified": "2026-11-13",
+      "published": "",
+      "evidence": "official",
+      "spoiler": "none",
+      "related": [],
+      "tags": []
+    }
+  ]
+}

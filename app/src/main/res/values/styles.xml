@@ -1,0 +1,9 @@
+<resources>
+ <style name="Theme.Atlas" parent="android:style/Theme.Material.Light.NoActionBar">
+  <item name="android:fontFamily">sans</item><item name="android:windowLightStatusBar">false</item>
+  <item name="android:windowSplashScreenBackground">#0B0E19</item>
+  <item name="android:windowSplashScreenAnimatedIcon">@drawable/atlas_mark</item>
+  <item name="android:colorAccent">#FF967D</item><item name="android:navigationBarColor">#0B0E19</item>
+  <item name="android:windowActionModeOverlay">true</item>
+ </style>
+</resources>
